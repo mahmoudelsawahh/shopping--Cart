@@ -17,3 +17,16 @@
 main {
   grid-area: main;
 }
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px;
+}
+.wrapper .products {
+  width: 60%;
+}
+.wrapper .filter {
+  width: 35%;
+}

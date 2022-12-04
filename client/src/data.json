@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Sample Product",
-    "image": "/client/public/images/jsamazona.jpg",
+    "image": "/public/images/product-3.jpg",
     "desc": "Very Nice Cloth",
     "price": "120",
     "size": ["s", "m"]
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "title": "Fit Pants",
-    "image": "/client/public/images/product-1.jpg",
+    "image": "/public/images/product-1.jpg",
     "desc": "Very Nice Cloth",
     "price": "180",
     "size": ["x", "l"]
@@ -18,7 +18,7 @@
   {
     "id": 3,
     "title": "Best Pants",
-    "image": "/client/public/images/product-2.jpg",
+    "image": "/public/images/product-2.jpg",
     "desc": "Very Nice Cloth",
     "price": "85",
     "size": ["s", "m", "l"]
@@ -26,7 +26,7 @@
   {
     "id": 4,
     "title": "Free Pants",
-    "image": "/client/public/images/product-4.jpg",
+    "image": "/public/images/product-5.jpg",
     "desc": "Very Nice Cloth",
     "price": "99",
     "size": ["s", "l"]
