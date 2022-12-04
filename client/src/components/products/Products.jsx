@@ -1,16 +1,16 @@
-import React from "react";
-import data from "../../data.json";
+import React, { useState } from "react";
 import "../../css/products/Products.css";
-const Products = () => {
+
+const Products = ({ data }) => {
   return (
     <div className="product-wrapper">
-      {data.map((ele) => {
+      {data.map((item) => {
         return (
-          <div className="product-item" key={ele.id}>
-            <img src={ele.image} alt={ele.title} />
+          <div className="product-item" key={item.id}>
+            <img src={item.image} alt={item.title} />
             <div className="product-desc">
-              <p>{ele.title}</p>
-              <span>{ele.price}</span>
+              <p>{item.title}</p>
+              <span>{item.price}</span>
             </div>
             <button>Add To Cart</button>
           </div>
