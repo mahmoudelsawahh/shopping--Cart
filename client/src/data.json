@@ -4,7 +4,7 @@
     "title": "Sample Product",
     "image": "/public/images/product-3.jpg",
     "desc": "Very Nice Cloth",
-    "price": "120",
+    "price": "60",
     "size": ["s", "m"]
   },
   {
@@ -13,7 +13,7 @@
     "image": "/public/images/product-1.jpg",
     "desc": "Very Nice Cloth",
     "price": "180",
-    "size": ["x", "l"]
+    "size": ["xs", "l"]
   },
   {
     "id": 3,
