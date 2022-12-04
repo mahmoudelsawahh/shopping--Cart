@@ -1,0 +1,6 @@
+body {
+  background-color: red;
+  color: green;
+  font-size: 30px;
+  display: flex;
+}
