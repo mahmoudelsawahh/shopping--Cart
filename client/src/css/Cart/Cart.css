@@ -34,10 +34,65 @@
   margin: 25px 0px;
   padding: 30px;
   letter-spacing: 1.7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .cart-layout .total-price h2 {
   color: #2a5ea5;
 }
 .cart-layout .total-price h2 span {
   color: rgb(17, 161, 17);
+}
+.cart-layout .total-price button {
+  display: block;
+  border: 0;
+  background-color: #2a5ea5;
+  color: #fff;
+  padding: 7px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-control {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #ddd;
+}
+.form-control .close {
+  position: absolute;
+  right: 0;
+  font-size: 30px;
+  padding: 10px 15px;
+  background-color: red;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9333333333);
+}
+.form-control form {
+  width: 60%;
+  margin: auto;
+  left: 0;
+  padding: 40px;
+}
+.form-control form > div {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.form-control form input {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #c0c0c0;
+}
+
+.checkout {
+  display: block;
+  border: 0;
+  background-color: #2a5ea5;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
 }

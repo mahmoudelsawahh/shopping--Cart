@@ -35,6 +35,9 @@
     margin: 25px 0px;
     padding: 30px;
     letter-spacing: 1.7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     h2 {
       color: #2a5ea5;
@@ -43,5 +46,58 @@
         color: rgb(17, 161, 17);
       }
     }
+    button {
+      display: block;
+      border: 0;
+      background-color: #2a5ea5;
+      color: #fff;
+      padding: 7px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
   }
+}
+
+.form-control {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #ddd;
+
+  .close {
+    position: absolute;
+    right: 0;
+    font-size: 30px;
+    padding: 10px 15px;
+    background-color: red;
+    cursor: pointer;
+    color: #fffe;
+  }
+  form {
+    width: 60%;
+    margin: auto;
+    left: 0;
+    padding: 40px;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+    }
+    input {
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #c0c0c0;
+    }
+  }
+}
+.checkout {
+  display: block;
+  border: 0;
+  background-color: #2a5ea5;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
 }

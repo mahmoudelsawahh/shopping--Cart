@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Cart from "./components/Cart/Cart";
 import Filter from "./components/Filter/Filter";
 import Footer from "./components/Footer/Footer";
@@ -9,7 +9,9 @@ const App = () => {
   const [products, setProducts] = useState(data);
   const [size, setSize] = useState("");
   const [sort, setSort] = useState("");
-  const [cartItems, setCartItems] = useState(data);
+  const [cartItems, setCartItems] = useState(
+    JSON.parse(localStorage.getItem("cartItems")) || []
+  );
   const handelFilterBySize = (e) => {
     const productClone = data;
     setSize(e.target.value);
@@ -37,13 +39,39 @@ const App = () => {
     });
     return setProducts(newProducts);
   };
+
+  const addToCart = (product) => {
+    const cartItemClone = [...cartItems];
+    let isProductExist = false;
+    cartItemClone.forEach((ele) => {
+      if (product.id == ele.id) {
+        ele.qty++;
+        isProductExist = true;
+      }
+    });
+    if (!isProductExist) {
+      cartItemClone.push({ ...product, qty: 1 });
+    }
+    return setCartItems(cartItemClone);
+  };
+
+  const removeFromCart = (product) => {
+    const cartItemsClone = [...cartItems];
+    const removeItem = cartItemsClone.filter((ele) => {
+      return ele.id !== product.id;
+    });
+    return setCartItems(removeItem);
+  };
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
   return (
     <div className="layout">
       <Header />
       <main>
         <div className="wrapper">
           <div className="products">
-            <Products data={products} />
+            <Products data={products} addToCart={addToCart} />
           </div>
           <div className="filter" data={products}>
             <Filter
@@ -55,7 +83,7 @@ const App = () => {
             />
           </div>
         </div>
-        <Cart cartItems={cartItems} />
+        <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
       </main>
       <Footer />
     </div>
