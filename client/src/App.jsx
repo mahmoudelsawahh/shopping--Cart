@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Cart from "./components/Cart/Cart";
 import Filter from "./components/Filter/Filter";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
@@ -8,9 +9,9 @@ const App = () => {
   const [products, setProducts] = useState(data);
   const [size, setSize] = useState("");
   const [sort, setSort] = useState("");
-  const productClone = data;
-
+  const [cartItems, setCartItems] = useState(data);
   const handelFilterBySize = (e) => {
+    const productClone = data;
     setSize(e.target.value);
     if (e.target.value !== "all") {
       const newProducts = productClone.filter((ele) => {
@@ -25,7 +26,7 @@ const App = () => {
   const handelFilterBySort = (e) => {
     const order = e.target.value;
     setSort(order);
-    const newProducts = productClone.sort((a, b) => {
+    const newProducts = products.sort((a, b) => {
       if (order == "lower") {
         return a.price - b.price;
       } else if (order == "highest") {
@@ -50,9 +51,11 @@ const App = () => {
               size={size}
               handelFilterBySort={handelFilterBySort}
               sort={sort}
+              data={products}
             />
           </div>
         </div>
+        <Cart cartItems={cartItems} />
       </main>
       <Footer />
     </div>

@@ -1,10 +1,16 @@
 import React from "react";
 import "../../css/Filter/Filter.css";
-const Filter = ({ handelFilterBySize, size, handelFilterBySort, sort }) => {
+const Filter = ({
+  handelFilterBySize,
+  size,
+  handelFilterBySort,
+  sort,
+  data,
+}) => {
   return (
     <div className="filter-wrapper">
       <h2>Filter</h2>
-      <p>Number Of Products 4 Item</p>
+      <p>Number Of Products {data.length} Item</p>
       <div className="filter-size">
         <span>Filter</span>
         <select
