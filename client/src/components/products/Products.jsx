@@ -10,7 +10,7 @@ const Products = ({ data }) => {
             <img src={item.image} alt={item.title} />
             <div className="product-desc">
               <p>{item.title}</p>
-              <span>{item.price}</span>
+              <span>${item.price}</span>
             </div>
             <button>Add To Cart</button>
           </div>
