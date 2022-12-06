@@ -20,24 +20,28 @@
 .cart-layout .cart-content img {
   width: 150px;
 }
-.cart-layout .cart-content button {
-  display: block;
-  border: 0;
-  background-color: #2a5ea5;
-  color: #fff;
-  padding: 7px;
-  border-radius: 6px;
-  cursor: pointer;
-}
 .cart-layout .total-price {
   background-color: #ddd;
   margin: 25px 0px;
   padding: 30px;
   letter-spacing: 1.7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .cart-layout .total-price h2 {
   color: #2a5ea5;
 }
 .cart-layout .total-price h2 span {
   color: rgb(17, 161, 17);
+}
+
+button {
+  display: block;
+  border: 0;
+  background-color: #2a5ea5;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
 }
