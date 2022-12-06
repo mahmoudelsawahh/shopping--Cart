@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../css/products/Products.css";
 
-const Products = ({ data }) => {
+const Products = ({ data, addToCart }) => {
   return (
     <div className="product-wrapper">
       {data.map((item) => {
@@ -12,7 +12,7 @@ const Products = ({ data }) => {
               <p>{item.title}</p>
               <span>${item.price}</span>
             </div>
-            <button>Add To Cart</button>
+            <button onClick={() => addToCart(item)}>Add To Cart</button>
           </div>
         );
       })}
