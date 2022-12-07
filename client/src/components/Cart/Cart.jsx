@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../../css/Cart/Cart.css";
 import Form from "../Form/Form";
+import Slide from "react-reveal/Slide";
+
 const Cart = ({ cartItems, removeFromCart }) => {
   const [form, setForm] = useState(false);
   const totlaProductPrice = () => {
