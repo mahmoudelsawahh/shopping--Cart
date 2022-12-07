@@ -13,6 +13,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
+    "react-reveal": "^1.2.2",
     "react-scripts": "5.0.1",
     "sass": "^1.56.1",
     "vite": "^3.2.4",
